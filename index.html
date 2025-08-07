@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Dr. DEE'S Healthcare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo img{
+            width: 150px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#home" class="ml-2 text-xl font-semibold text-gray-800"> <div class="flex items-center space-x-2    logo">
+                
+                    <img src="images/logo.png" alt="">
+                </div>  </a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <!-- <a href="#benefits" class="text-emerald-700 hover:text-emerald-500 font-medium">Benefits</a>
+                <a href="#ingredients" class="text-emerald-700 hover:text-emerald-500 font-medium">Ingredients</a>
+                <a href="#how-it-works" class="text-emerald-700 hover:text-emerald-500 font-medium">How It Works</a>
+                <a href="#testimonials" class="text-emerald-700 hover:text-emerald-500 font-medium">Testimonials</a> -->
+            </nav>
+            <button class="md:hidden text-emerald-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <button class="hidden md:block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                Order Now
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient">
+        <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Do you know that <span class="text-emerald-700">DETOXIFYING</span> your body organs with natural supplements like ours will help you  among others:</h1>
+                <p class="text-lg font-bold text-gray-700 mb-8">Premature ageing <br>
+
+                    Live healthier <br>
+                    
+                    Vitality <br>
+                    
+                    Longevity </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <!-- <button class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 pulse-animation">
+                        Try It Now - 30% Off
+                    </button> -->
+                    <button class="border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold py-3 px-8 rounded-full transition duration-300">
+                        <a href="#benefits"> Learn More</a> 
+                    </button>
+                </div>
+                <div class="mt-8 flex items-center">
+                    <!-- <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/43.jpg" alt="Happy customer">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Happy customer">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Happy customer">
+                    </div> -->
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-700">Trusted by 10,000+ customers</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-700 ml-2">4.9/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="images/freshdetox.jpg" alt="PureDetox Supplement Bottle" class="rounded-lg shadow-xl w-full max-w-md">
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex items-center">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">100% Natural</p>
+                                <p class="text-sm text-gray-600">No artificial ingredients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Introducing</h2>
+                <!-- <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our unique blend of natural herbs works synergistically to cleanse and support your body's vital detox organs.</p> -->
+            </div>
+<br><br>
+            <section id="about" class="py-8 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center">
+                        
+                        <div class="md:w-1/1 relative">
+                            <img src="images/dforte.jpg" alt="Dr. Greenleaf" class="rounded-lg shadow-xl w-full">
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </section>
+
+
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-emerald-50 p-8 rounded-xl text-center">
+                    <!-- <div class="bg-emerald-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-2xl text-emerald-600"></i>
+                    </div> -->
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dr. DEE'S   ZEOLICARE DETOX FORTE  (by 80 capsules mega bottle)</h3>
+                    <p class="text-gray-600">Unlike other traditional DETOX in the markets that purges, it keeps you running to the toilet every now and then; weak and drained for days. <br><br>
+
+                        DETOX FORTE advantageous  benefits among others are:</p>
+                    <p class="text-gray-600">Unlike other traditional DETOX in the markets that purges, it keeps you running to the toilet every now and then; weak and drained for days. <br><br>
+
+                        DETOX FORTE advantageous  benefits among others are:</p> <br>
+                    <p class="text-gray-600 font-bold">1. None Purging Detoxification: <br>
+                        It magnates toxins,  herbicides, radioactive substances, and pesticides from inorganic vegetables/ foods and remove them without purge  or side effects</p> <br>
+                    <p class="text-gray-600 font-bold">2. Increase Energy and Strength: <br>
+                        Our unique formula not only removes toxins but also boosts energy levels and makes you feel stronger and more vibrant.</p> <br>
+                    <p class="text-gray-600 font-bold">3. ALL NATURAL INGREDIENTS: <br>
+                        DETOX FORTE  supplement is made from all-natural ingredients,  ensuring a safe and gentle detoxification process.</p> <br>
+                    <p class="text-gray-600 font-bold">4. OLD AND YOUNG FORMULA: <br>
+                        The traditional detox  supplements in the markets  purges and not very suitable for young children and elderly people from 70 years and above due to weaknesses associated with purging conditions But, 
+                        Dr. DEE'S DETOX FORTE supplement is recommended to, from  6 years old, up  to  aged people  because it does not purge but magnates.
+                       It does not weaken but straighten. </p> <br>
+                    <p class="text-gray-600 font-bold">5 OVERALL RESPONSE TO TREATMENT: <br>
+                        Due to unhealthy diets or long-term medications, the body response to treatment gradually declines. 
+                        Also, when the body is gradually getting weak or aging, the right thing the body needs at that moment is our unique none- purging DETOX FORTE that has capacity to penetrate all cells of the body to remove toxins, cleanses blood and detoxify all internal organs to improves digestion, assimilation and excretion.
+                        Boost immune and rejuvenate  organs of the body back to life again.</p> <br>
+                    <p class="text-gray-600 font-bold">6 HOLISTIC APPROACH: <br>
+                        Dr. DEE'S DETOX FORTE supplement targets the root causes of toxicity , promoting overall well-being    and health</p> <br>
+                    <p class="text-gray-600 ">
+                        PLACE YOUR ORDER HERE: <br> <br>
+
+                        Order for <br>
+                        1 Mega Bottle By 80 capsules 45k
+<br>
+                        Order for <br>
+                        2 mega  bottles  by 80 Capsules pay  80k
+<br>
+                        Order for <br>
+                        1 normal bottle by 40 capsules  23k <br>
+                        2 bottles 43k
+                    </p> <br>
+                    <button  class=" md:block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6  transition duration-300">
+                        <a href="https://wa.me/message/7ODTHIGMWN3RP1">Order Here.</a> <br> <br>
+                      </button> 
+                </div>
+                <div class="bg-emerald-50 p-8 rounded-xl text-center">
+                    <!-- <div class="bg-emerald-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-2xl text-emerald-600"></i>
+                    </div> -->
+
+
+                    
+<br>
+
+                    <section id="about" class="py-8 bg-white">
+                        <div class="container mx-auto px-6">
+                            <div class="flex flex-col md:flex-row items-center">
+                                
+                                <div class="md:w-1/1 relative">
+                                    <img src="images/iforte.jpg" alt="Dr. Greenleaf" class="rounded-lg shadow-xl w-full">
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </section>
+<br>
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3"> Dr. DEE'S  ZEOLICARE IMUNO FORTE</h3>
+                    <p class="text-gray-600">100% Natural Immune Booster. <br><br>
+
+                        Block the proliferation of viruses and viral infections. <br><br>
+                       
+                        Strengthen the immune system to fight against diseases. 
+                        HIV </p>
+                    <p class="text-gray-600">
+                        PLACE YOUR ORDER HERE:
+<br>
+                        1 Mega bottle by 80 CAPSULES <br>
+                        N55,000
+                     </p>
+                     <button  class=" md:block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6  transition duration-300">
+                        <a href="https://wa.me/message/7ODTHIGMWN3RP1">Order Here.</a> <br> <br>
+                      </button> 
+                </div>
+
+
+<br><br><br>
+                
+                <section id="about" class="py-8 bg-white">
+                    <div class="container mx-auto px-6">
+                        <div class="flex flex-col md:flex-row items-center">
+                            
+                            <div class="md:w-1/1 relative">
+                                <img src="images/mforte.jpg" alt="Dr. Greenleaf" class="rounded-lg shadow-xl w-full">
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <div class="bg-emerald-50 p-8 rounded-xl text-center">
+                    <!-- <div class="bg-emerald-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-seedling text-2xl text-emerald-600"></i>
+                    </div> -->
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dr. DEE'S  ZEOLICARE METABOLIC FORTE</h3>
+                    <p class="text-gray-600">
+                        Normalizes body pH level. <br>
+                        
+                        Prevent,  neutralize chronic incurable aliments. <br>
+                        
+                        Remove condition in which cancer cells develop in our body <br>
+                        
+                        Solution for diverse Incurable diseases <br>
+                        
+                        80 CAPSULES BOTTLE</p>
+                        <button  class=" md:block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6  transition duration-300">
+                            <a href="https://wa.me/message/7ODTHIGMWN3RP1">Order Here.</a> <br> <br>
+                          </button> 
+                </div>
+
+               
+                <br><br><br>
+                
+
+                <section id="about" class="py-8 bg-white">
+                    <div class="container mx-auto px-6">
+                        <div class="flex flex-col md:flex-row items-center">
+                            
+                            <div class="md:w-1/1 relative">
+                                <img src="images/hlp.jpg" alt="Dr. Greenleaf" class="rounded-lg shadow-xl w-full">
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <div class="bg-emerald-50 p-8 rounded-xl text-center">
+                  
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dr. DEE'S  HEALTHY LIVING PACK</h3>
+                    <p class="text-gray-600"> 
+                        A combination of all of the above. <br>
+                        
+                         detoxify all internal organs without purge; <br>
+                        
+                         Boost immune system and block the proliferation of viruses and viral infections <br>
+                        
+                        It also normalizes the body PH, prevents,  neutralizes chronic diseases, and  also removes the condition in which cancer cells develop in our body. <br><br>
+                        
+                      <button  class=" md:block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6  transition duration-300">
+                        <a href="https://wa.me/message/7ODTHIGMWN3RP1">Order Here.</a> <br> <br>
+                      </button>   
+                        Packaging Details: <br>
+                
+                3 in 1 mega bottles 80x3 =240 Capsules 
+                N160,000 <br>
+                
+                3 in 1 Normal bottle 40 x3 =120 Capsules 
+                 N85,000
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <!-- <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">How PureDetox Works</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our 3-step detox process helps your body naturally eliminate toxins and restore balance.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-md border-2 border-emerald-100">
+                        <span class="text-2xl font-bold text-emerald-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Bind Toxins</h3>
+                    <p class="text-gray-600">Natural ingredients bind to heavy metals and toxins in your digestive tract.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-md border-2 border-emerald-100">
+                        <span class="text-2xl font-bold text-emerald-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Support Organs</h3>
+                    <p class="text-gray-600">Herbs nourish and support liver, kidneys, and colon for optimal detox function.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-md border-2 border-emerald-100">
+                        <span class="text-2xl font-bold text-emerald-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Eliminate Naturally</h3>
+                    <p class="text-gray-600">Your body naturally eliminates toxins through urine, sweat, and bowel movements.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Ingredients Section -->
+    <!-- <section id="ingredients" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Natural Herbs" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Powerful Natural Ingredients</h2>
+                    <p class="text-lg text-gray-600 mb-8">Our formula combines time-tested herbs with scientifically validated detoxification properties.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Milk Thistle</h3>
+                                <p class="text-gray-600">Supports liver health and regeneration with powerful antioxidant silymarin.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Dandelion Root</h3>
+                                <p class="text-gray-600">Natural diuretic that supports liver detoxification and bile production.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Burdock Root</h3>
+                                <p class="text-gray-600">Purifies blood and supports kidney function with its detoxifying properties.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Psyllium Husk</h3>
+                                <p class="text-gray-600">Gentle fiber that promotes colon cleansing and healthy digestion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Real people experiencing real results with PureDetox.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"After just two weeks on PureDetox, my energy levels have skyrocketed. I no longer have that afternoon slump and my digestion has never been better!"</p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J.">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I was skeptical at first, but PureDetox has made a noticeable difference in my overall wellbeing. My skin is clearer and I feel lighter and more energetic."</p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael T.</h4>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As someone who's tried many detox products, PureDetox stands out. It's gentle yet effective, and I love that it's made with all-natural ingredients."</p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa M.">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Lisa M.</h4>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA Section -->
+    <!-- <section class="py-16 bg-emerald-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Experience the PureDetox Difference?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who have transformed their health with our natural detox formula.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white hover:bg-gray-100 text-emerald-700 font-bold py-4 px-8 rounded-full transition duration-300">
+                    Order Now - 30% Off
+                </button>
+                <button class="border-2 border-white hover:bg-emerald-800 text-white font-bold py-4 px-8 rounded-full transition duration-300">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FAQ Section -->
+    <!-- <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to know about PureDetox.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">How should I take PureDetox?</h3>
+                    <p class="text-gray-600">We recommend taking 2 capsules daily with a glass of water, preferably in the morning. For best results, use consistently for at least 30 days.</p>
+                </div>
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">When will I see results?</h3>
+                    <p class="text-gray-600">Many customers report feeling increased energy and improved digestion within the first week. Full detoxification benefits typically become noticeable after 2-4 weeks of consistent use.</p>
+                </div>
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Is PureDetox safe?</h3>
+                    <p class="text-gray-600">Yes, PureDetox is made with 100% natural herbs and contains no artificial ingredients. However, if you're pregnant, nursing, or have a medical condition, please consult your healthcare provider before use.</p>
+                </div>
+                <div class="mb-6 pb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">What's your return policy?</h3>
+                    <p class="text-gray-600">We offer a 60-day money-back guarantee. If you're not completely satisfied with your results, simply return the unused portion for a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="#home" class="ml-2 text-xl font-semibold text-gray-800"> <div class="flex items-center space-x-2    logo">
+                
+                            <img src="images/logo.png" alt="">
+                        </div>  </a>
+                    </div>
+                    <p class="text-gray-400">Natural supplements for complete body detoxification and wellness.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <!-- <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white">Benefits</a></li>
+                        <li><a href="#ingredients" class="text-gray-400 hover:text-white">Ingredients</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white">How It Works</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                    </ul> -->
+                </div>
+                <div>
+                    <!-- <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                    </ul> -->
+                </div>
+                <div>
+                    <!-- <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-emerald-400"></i>
+                            <span>123 Wellness St, Health City, HC 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-emerald-400"></i>
+                            <span>(800) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-emerald-400"></i>
+                            <span>support@puredetox.com</span>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dr. DEE'S All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle functionality would go here
+        // This is a placeholder for actual implementation
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            // This would toggle a mobile menu in a real implementation
+            alert('Mobile menu would open here in a complete implementation');
+        });
+    </script>
+</body>
+</html>
